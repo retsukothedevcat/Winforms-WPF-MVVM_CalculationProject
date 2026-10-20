@@ -8,14 +8,13 @@ Requires the .NET 8 SDK with the "Desktop development" workload.
 
 ## Read the projects in this order
 
-### 1_WinForms – what you already know
+### 1_WinForms 
 - `MainForm.cs`: controls created in C# with **fixed pixel positions** (`Location = new Point(140, 130)`)
 - `CalculateButton_Click`: the logic **reads the TextBoxes and writes the Label directly**
 
 ### 2_WpfCodeBehind – WPF, but used like WinForms
 - `MainWindow.xaml`: the UI is **described in XAML**; a **Grid** with rows and columns replaces pixel positions
 - `MainWindow.xaml.cs`: still a Click handler that accesses controls by `x:Name`
-- Lesson: WPF *can* be used like WinForms, but you miss its main strength
 
 ### 3_WpfMvvm – the real WPF way
 | File | Role |
@@ -57,8 +56,3 @@ Prism provides ready-made versions of the helpers written by hand here:
 - `RelayCommand` → Prism's `DelegateCommand`
 
 On top, Prism adds modules, regions, the EventAggregator and dependency injection for large applications.
-
-## Exercises
-1. In `3_WpfMvvm`, add a **root diameter** result: df = m · (z − 2.5)
-2. Add a **tooth height** result: h = 2.25 · m
-3. Make the window wider in the designer and watch the Grid adapt; compare with the WinForms window
